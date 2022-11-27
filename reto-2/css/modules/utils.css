@@ -1,0 +1,39 @@
+.d-none{
+    display: none;
+}
+
+.p-relative {
+    position: relative;
+}
+  
+.f-col{
+    flex-direction: column;
+}
+
+.flex-1{
+    flex:1;
+}
+
+.gap-sm{
+    gap: calc(var(--padding-section) * 0.5);
+}
+.gap-md{
+    gap: var(--padding-section);
+}
+
+.gap-lg{
+    gap: calc(var(--padding-section) * 2.5);
+}
+
+.p-relative{
+    position: relative;
+}
+
+@media (min-width: 768px){
+    .md\:f-row{
+        flex-direction: row;
+    }
+    .md\:d-block{
+        display: block;
+    }
+}

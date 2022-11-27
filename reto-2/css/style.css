@@ -1,18 +1,16 @@
-:root{
-    --primary-color:#DC0058;
-}
-html{
-    font-size: 62.5%;
-}
-body{
-    font-size: 16px; /* 1rem = 10px */
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);/* Degradado */
+@import '../css/modules/layout.css';
+@import '../css/modules/utils.css';
+@import '../css/modules/card.css';
+@import '../css/modules/variables.css';
+@import '../css/modules/buttons.css';
+
+.body{
+    font-family: var(--primary-font-family);
     margin: 0;
 }
 
-.header{
-    
+.main{
+    overflow: hidden;
 }
 
 .header__container{
@@ -43,7 +41,7 @@ body{
 
 .header__container-nav{
     position: relative;
-    background-color: var(--primary-color);
+    background-color: var(--primary-theme-color);
 }
 
 .nav-list{
@@ -72,7 +70,6 @@ body{
     background-image: url("../assets/img/hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    
 }
 
 .banner__container{
@@ -101,7 +98,7 @@ body{
 .banner__btn{
     font-size: 1.5rem;
     padding: 0.5rem;
-    background-color: var(--primary-color);
+    background-color: var(--primary-theme-color);
     border-radius: 0.5rem;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     text-decoration:none;
@@ -117,14 +114,6 @@ body{
     gap: 2rem;
 }
 
-.services__header{
-
-}
-
-.services__header-title{
-
-}
-
 .services__container{
     display: flex;
     flex-direction: column;
@@ -138,7 +127,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #DC0058;
+    background-color: var(--primary-theme-color);
     margin: 0 2rem;
     padding: 2rem;
     border-radius: 2rem;
@@ -150,7 +139,7 @@ body{
 }
 
 .services__section-icon{
-    background-color: yellow;
+    background-color: var(--secondary-highlight-color);
     border-radius: 50%;
     padding: 2rem;
 }
