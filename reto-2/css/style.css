@@ -130,6 +130,14 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 2rem;
+}
+
+.services__section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #DC0058;
     margin: 0 2rem;
     padding: 2rem;
@@ -148,7 +156,7 @@ body{
 
 }
 
-.services__description{
+.services__section-description{
     text-align: center;
 }
 
@@ -162,17 +170,8 @@ body{
 .contact__header{
 
 }
-.contact__header-title{
 
-}
-.contact__container{
-
-}
-.contact__container-legend{
-
-}
-
-.contact__container-legend-title{
+.contact__title{
 
 }
 
@@ -180,26 +179,42 @@ body{
 
 }
 
+.form__legend{
+
+}
+
+.form__legend-title{
+
+}
+
 .form__container{
 
 }
 
-.form__container-label{
+.form__request{
 
 }
 
-.form__container-input{
+.form__label{
 
 }
 
-.form__container-textarea{
+.form__input{
 
 }
 
-.form__container-button{
+.form__button{
 
 }
 
-.form__container-button-send{
+.form__button-send{
 
+}
+
+@media (min-width: 768px){
+    .services__container{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
 }
