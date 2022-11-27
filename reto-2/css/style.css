@@ -21,22 +21,22 @@ body{
     position: relative;
 }
 
-.header__container-head{
+.header__container-title{
     margin: auto;
 }
 
-.header__container-head-title{
+.header__title{
     font-size: 2.5rem;
 }
 
-.header__container-head-title,
-.header__container-nav-list,
+.header__title,
+.nav-list,
 .banner__container{
     padding: 2rem 2rem;
     margin: 0;
 }
 
-.header__container-head-title-span{
+.header__title-span{
     font-size: 1.5rem;
     font-weight: 400;
 }
@@ -46,17 +46,17 @@ body{
     background-color: var(--primary-color);
 }
 
-.header__container-nav-list{
+.nav-list{
     display: flex;
     list-style: none;
     justify-content: space-evenly;
 }
 
-.header__container-nav-item{
+.nav-item{
     display: flex;
 }
 
-.header__container-nav-link{
+.nav-link{
     font-size: 1.2rem;
     text-decoration:none;
     color: white;
@@ -64,7 +64,7 @@ body{
     transition: transform 0.25s;
 }
 
-.header__container-nav-link:hover{
+.nav-link:hover{
     transform: scale(1.25);
 }
 
