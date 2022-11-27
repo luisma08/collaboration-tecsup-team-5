@@ -2,7 +2,7 @@
     box-shadow: 0 0 0.125rem var(--primary-shadow-color),
     0 0 0.25rem var(--primary-shadow-color);
     border-radius: var(--primary-border-radius);
-    max-width: 320px;
+    max-width: 360px;
     overflow: hidden;
     transition: box-shadow 0.25s;
     transition: transform 0.25s;

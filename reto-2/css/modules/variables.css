@@ -20,7 +20,10 @@
     --padding-section: 1.5rem;
     --padding-container: 1rem;
     --primary-border-radius: 0.5rem;
-    --primary-font-size: 0.125rem
+    --nav-primary-font-size: 1.125rem;
+    --primary-text-font-size: 1.5rem;
+    --secondary-text-font-size: 1.65rem;
+
   }
   
   @media (min-width:768px){
