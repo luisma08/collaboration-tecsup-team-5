@@ -1,0 +1,189 @@
+:root{
+    --primary-color:#DC0058;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 16px; /* 1rem = 10px */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);/* Degradado */
+    margin: 0;
+}
+.header{
+    
+}
+.header__container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.header__container-head{
+    margin: auto;
+}
+.header__container-head-title{
+    font-size: 2.5rem;
+}
+.header__container-head-title,
+.header__container-nav-list,
+.banner__container{
+    padding: 2rem 2rem;
+    margin: 0;
+}
+.header__container-head-title-span{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.header__container-nav{
+    position: relative;
+    background-color: var(--primary-color);
+}
+
+.header__container-nav-list{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+}
+.header__container-nav-item{
+    display: flex;
+}
+.header__container-nav-link{
+    font-size: 1.2rem;
+    text-decoration:none;
+    color: white;
+    text-transform: uppercase;
+    transition: transform 0.25s;
+}
+.header__container-nav-link:hover{
+    transform: scale(1.25);
+}
+.banner{
+    background-image: url("../assets/img/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.banner__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    height: 20rem;
+    background-color: rgba(0, 0, 0, .7);
+}
+.banner__title, .banner__description{
+    margin: 0;
+    color: white;
+}
+.banner__title{
+    font-size: 2rem;
+}
+.banner__description{
+    font-size: 1.2rem;
+}
+.banner__btn{
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    background-color: var(--primary-color);
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    text-decoration:none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.services{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.services__header{
+
+}
+
+.services__header-title{
+
+}
+
+.services__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #DC0058;
+    margin: 0 2rem;
+    padding: 2rem;
+    color: white;
+}
+
+.services__container-header{
+
+}
+
+.services__container-header-title{
+
+}
+
+.services__container-icon{
+
+}
+
+.services__description{
+    text-align: center;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact__header{
+
+}
+.contact__header-title{
+
+}
+.contact__container{
+
+}
+.contact__container-legend{
+
+}
+
+.contact__container-legend-title{
+
+}
+
+.form{
+
+}
+
+.form__container{
+
+}
+
+.form__container-label{
+
+}
+
+.form__container-input{
+
+}
+
+.form__container-textarea{
+
+}
+
+.form__container-button{
+
+}
+
+.form__container-button-send{
+
+}
