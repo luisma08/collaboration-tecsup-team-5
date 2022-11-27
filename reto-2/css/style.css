@@ -10,30 +10,37 @@ body{
     background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);/* Degradado */
     margin: 0;
 }
+
 .header{
     
 }
+
 .header__container{
     display: flex;
     flex-direction: column;
     position: relative;
 }
+
 .header__container-head{
     margin: auto;
 }
+
 .header__container-head-title{
     font-size: 2.5rem;
 }
+
 .header__container-head-title,
 .header__container-nav-list,
 .banner__container{
     padding: 2rem 2rem;
     margin: 0;
 }
+
 .header__container-head-title-span{
     font-size: 1.5rem;
     font-weight: 400;
 }
+
 .header__container-nav{
     position: relative;
     background-color: var(--primary-color);
@@ -44,9 +51,11 @@ body{
     list-style: none;
     justify-content: space-evenly;
 }
+
 .header__container-nav-item{
     display: flex;
 }
+
 .header__container-nav-link{
     font-size: 1.2rem;
     text-decoration:none;
@@ -54,15 +63,18 @@ body{
     text-transform: uppercase;
     transition: transform 0.25s;
 }
+
 .header__container-nav-link:hover{
     transform: scale(1.25);
 }
+
 .banner{
     background-image: url("../assets/img/hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     
 }
+
 .banner__container{
     display: flex;
     flex-direction: column;
@@ -72,16 +84,20 @@ body{
     height: 20rem;
     background-color: rgba(0, 0, 0, .7);
 }
+
 .banner__title, .banner__description{
     margin: 0;
     color: white;
 }
+
 .banner__title{
     font-size: 2rem;
 }
+
 .banner__description{
     font-size: 1.2rem;
 }
+
 .banner__btn{
     font-size: 1.5rem;
     padding: 0.5rem;
