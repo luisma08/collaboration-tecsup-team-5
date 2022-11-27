@@ -32,8 +32,12 @@
     border-radius: 0.5rem;
 }
 
-.form__input, .form__input::placeholder{
+.form__input, .form__input::placeholder, .form__textarea::placeholder{
     font-size: var(--nav-primary-font-size);
+}
+
+.form__input:focus, .form__textarea:focus{
+    border: 5px solid var(--secondary-highlight-color);
 }
 
 .form__button{
