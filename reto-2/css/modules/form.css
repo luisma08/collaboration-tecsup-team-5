@@ -41,10 +41,6 @@
     justify-content: end;
 }
 
-.form__button-send{
-
-}
-
 @media (min-width: 768px){
     .form__img{
         max-width: 450px;
