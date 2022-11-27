@@ -141,19 +141,22 @@ body{
     background-color: #DC0058;
     margin: 0 2rem;
     padding: 2rem;
+    border-radius: 2rem;
+}
+
+.services__section-header-title,
+.services__section-description{
     color: white;
 }
 
-.services__container-header{
-
+.services__section-icon{
+    background-color: yellow;
+    border-radius: 50%;
+    padding: 2rem;
 }
 
-.services__container-header-title{
-
-}
-
-.services__container-icon{
-
+.services__section-icon.multi{
+    padding: 3.5rem 2rem;
 }
 
 .services__section-description{
