@@ -5,6 +5,7 @@
     max-width: 320px;
     overflow: hidden;
     transition: box-shadow 0.25s;
+    transition: transform 0.25s;
   }
   
   .card__services {
@@ -13,6 +14,7 @@
 
   .card:hover {
     box-shadow: 0 0 0.25rem 0 var(--primary-highlight-color);
+    transform: scale(1.125);
   }
   
   .card__header,
