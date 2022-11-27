@@ -3,7 +3,7 @@
     border: 0.0625rem solid var(--primary-theme-color);
     border-radius: var(--primary-border-radius);
     color: var(--primary-text-color);
-    font-size: 1rem;
+    font-size: 1.25rem;
     text-decoration: none;
     font-weight: 600;
     font-family: var(--primary-font-family);

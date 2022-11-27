@@ -13,11 +13,14 @@
     --secondary-highlight-color: gold;
     --primary-button-color: #61dafb;
     --secondary-button-color: gold;
+    --primary-border-color:#000000;
+    --reverse-primary-border-color:#ffffff;
     --primary-font-family: 'Inconsolata', monospace;
     --max-width-container: 1024px;
     --padding-section: 1.5rem;
     --padding-container: 1rem;
     --primary-border-radius: 0.5rem;
+    --primary-font-size: 0.125rem
   }
   
   @media (min-width:768px){
