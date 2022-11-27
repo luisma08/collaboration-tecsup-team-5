@@ -1,0 +1,50 @@
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact__header{
+
+}
+
+.contact__title{
+
+}
+
+.form{
+
+}
+
+.form__legend{
+
+}
+
+.form__legend-title{
+
+}
+
+.form__container{
+
+}
+
+.form__request{
+
+}
+
+.form__label{
+
+}
+
+.form__input{
+
+}
+
+.form__button{
+
+}
+
+.form__button-send{
+
+}

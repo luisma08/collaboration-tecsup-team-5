@@ -49,16 +49,12 @@
         </div>
     </section>
     <main class="main">
-        <div class="services">
-            <div class="services__header">
-                <h2 class="services__header-title" id="services">Mis Servicios</h2>
-            </div>
-            <div class="services__container">
-                <section class="services__section">
-                    <div class="services__section-header">
-                        <h3 class="services__section-header-title">Diseño Web</h3>
-                    </div>
-                    <div class="services__section-icon">
+        <section class="section" id="services">
+            <div class="container f-elements f-col gap-md">
+              <h2 class="section__title">💻 Nuestros Servicios 💻</h2>
+              <div class="g-elements g-center gap-md g-template-columns">
+                <div class="card card__services">
+                    <div class="card__img-icon f-elements f-elements--center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-palette" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z"/>
                             <path d="M12 21a9 9 0 1 1 0 -18a9 8 0 0 1 9 8a4.5 4 0 0 1 -4.5 4h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25" />
@@ -67,16 +63,20 @@
                             <circle cx="16.5" cy="10.5" r=".5" fill="currentColor" />
                           </svg>
                     </div>
-                    <p class="services__section-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                    </p>
-                </section>
-                <section class="services__section">
-                    <div class="services__section-header">
-                        <h3 class="services__section-header-title">Aplicaciones Web</h3>
+                    <div class="card__body-services card__body-color f-elements f-col f-elements--center gap-sm">
+                        <h3 class="card__title">Diseño Web</h3>
+                        <p class="card__text">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                        </p>
                     </div>
-                    <div class="services__section-icon multi">
-                        <!-- https://tablericons.com/ -->
+                    <div class="card__footer">
+                        <div class="f-elements f-elements--center gap-md">
+                            <a href="#contact" rel="noopener noreferrer" class="button button--outline-secondary">Solicitar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card__services">
+                    <div class="card__img-icon f-elements f-elements--center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-android" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z"/>
                             <line x1="4" y1="10" x2="4" y2="16" />
@@ -93,15 +93,20 @@
                                 <path d="M12 4a2 2 0 0 0 2 -2a2 2 0 0 0 -2 2" />
                               </svg>
                     </div>
-                    <p class="services__section-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                    </p>
-                </section>
-                <section class="services__section">
-                    <div class="services__section-header">
-                        <h3 class="services__section-header-title">E-Commerce</h3>
+                    <div class="card__body-services f-elements f-col f-elements--center gap-sm">
+                        <h3 class="card__title">Aplicaciones Web</h3>
+                        <p class="card__text">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                        </p>
                     </div>
-                    <div class="services__section-icon">
+                    <div class="card__footer">
+                        <div class="f-elements f-elements--center gap-md">
+                            <a href="#contact" rel="noopener noreferrer" class="button button--outline-secondary">Solicitar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card__services">
+                    <div class="card__img-icon f-elements f-elements--center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-credit-card" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z"/>
                             <rect x="3" y="5" width="18" height="14" rx="3" />
@@ -110,12 +115,21 @@
                             <line x1="11" y1="15" x2="13" y2="15" />
                           </svg>
                     </div>
-                    <p class="services__section-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                    </p>
-                </section>
+                    <div class="card__body-services f-elements f-col f-elements--center gap-sm">
+                        <h3 class="card__title">E-Commerce</h3>
+                        <p class="card__text">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                        </p>
+                    </div>
+                    <div class="card__footer">
+                        <div class="f-elements f-elements--center gap-md">
+                            <a href="#contact" rel="noopener noreferrer" class="button button--outline-secondary">Solicitar</a>
+                        </div>
+                    </div>
+                </div>
+              </div>
             </div>
-        </div>
+        </section>
         <section class="section" id="projects">
             <div class="container f-elements f-col gap-md">
               <h2 class="section__title">💻 Proyectos 💻</h2>

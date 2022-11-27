@@ -1,0 +1,27 @@
+.header{
+
+}
+
+.header__container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.header__container-title{
+    margin: auto;
+}
+
+.header__title{
+    font-size: 2.5rem;
+}
+
+.header__title-span{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.header__container-nav{
+    position: relative;
+    background-color: var(--primary-theme-color);
+}

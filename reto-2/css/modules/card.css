@@ -7,6 +7,10 @@
     transition: box-shadow 0.25s;
   }
   
+  .card__services {
+    background-color: var(--primary-highlight-color);
+  }
+
   .card:hover {
     box-shadow: 0 0 0.25rem 0 var(--primary-highlight-color);
   }
@@ -14,7 +18,7 @@
   .card__header,
   .card__footer {
     background-color: var(--reverse-primary-shadow-color);
-    padding: 0.5rem 1rem;
+    padding: 1rem;
   }
 
   .card__img{
@@ -24,9 +28,23 @@
     object-fit: cover;
   }
 
+  .card__img-icon{
+    width: 8rem;
+    padding: 2rem 0rem;
+    background-color: var(--secondary-highlight-color);
+    border-radius: 50%;
+    margin: 2rem auto;
+  }
+
   .card__body {
     background-color: var(--reverse-secondary-shadow-color);
     padding: 1rem;
+  }
+
+  .card__body-services {
+    background-color: none;
+    color: var(--primary-text-color);
+    padding: 1.2rem;
   }
   
   .card__title {

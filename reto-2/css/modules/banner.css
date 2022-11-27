@@ -1,0 +1,39 @@
+.banner{
+    background-image: url("../../assets/img/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    height: 20rem;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.banner__title, .banner__description{
+    margin: 0;
+    color: white;
+}
+
+.banner__title{
+    font-size: 2rem;
+}
+
+.banner__description{
+    font-size: 1.2rem;
+}
+
+.banner__btn{
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    background-color: var(--primary-theme-color);
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    text-decoration:none;
+    color: white;
+    text-transform: uppercase;
+}
