@@ -21,10 +21,11 @@
     font-weight: 700;
     text-decoration: none;
     transition: color 0.25s;
+    font-size: var(--primary-text-font-size);
 }
 
 .list__link:hover {
-    color: var(--primary-highlight-color);
+    color: var(--secondary-highlight-color);
 }
 .list__link::before{
     content: '';
@@ -47,5 +48,8 @@
         width: auto;
         height: auto;
         background-color: transparent;
+    }
+    .list__link {
+        font-size: var(--nav-primary-font-size);
     }
 }
