@@ -5,35 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body class="body"><!--v1.0-->
     <header class="header">
-        <div class="header__container">
+        <nav class="nav f-elements" id="header-nav">
             <div class="header__container-title">
                 <h1 class="header__title">Full Stack <span class="header__title-span">Freelancer</span></h1>
             </div>
-            <div class="header__container-nav">
-                <nav class="nav">
-                    <ul class="nav-list">
-                        <li class="nav-item">
-                            <a href=""  class="nav-link">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#services" class="nav-link">Servicios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#projects" class="nav-link">Portafolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#contact" class="nav-link">Contacto</a>
-                        </li>
-                    </ul>
-                </nav>
+            <div class="container f-elements f-elements--between p-relative">
+                <a href="#header-nav" class="nav__icon nav__icon--menu">
+                    <i class="bi bi-list"></i>
+                  </a>
+                  <a href="#header-close" class="nav__icon nav__icon--close">
+                    <i class="bi bi-x-circle"></i>
+                  </a>
+                <ul class="list list--header f-elements f-col gap-md f-elements--center md:f-row">
+                    <li>
+                        <a href="#services" class="list__link">Servicios</a>
+                    </li>
+                    <li>
+                        <a href="#projects" class="list__link">Portafolio</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="list__link">Contacto</a>
+                    </li>
+                </ul>
             </div>
-        </div>
+        </nav>
     </header>
     <section class="banner">
         <div class="banner__container">
@@ -66,7 +68,7 @@
                     <div class="card__body-services f-elements f-col f-elements--center gap-sm">
                         <h3 class="card__title">Diseño Web</h3>
                         <p class="card__text">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            Diseño web personalizado con ideas estratégicas para convertir visitantes en clientes.
                         </p>
                     </div>
                     <div class="card__footer">
@@ -96,7 +98,7 @@
                     <div class="card__body-services f-elements f-col f-elements--center gap-sm">
                         <h3 class="card__title">Aplicaciones Web</h3>
                         <p class="card__text">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            Desarrollamos tus aplicaciones web en base a los objetivos de tu negocio.
                         </p>
                     </div>
                     <div class="card__footer">
@@ -118,7 +120,7 @@
                     <div class="card__body-services f-elements f-col f-elements--center gap-sm">
                         <h3 class="card__title">E-Commerce</h3>
                         <p class="card__text">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            Alcanza tus objetivos de ventas con tu tienda virtual. Un Ecommerce a tu medida
                         </p>
                     </div>
                     <div class="card__footer">
