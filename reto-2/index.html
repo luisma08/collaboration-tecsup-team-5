@@ -222,11 +222,11 @@
                             </div>
                             <div class="form__request f-elements f-col gap-sm">
                                 <label for="mail" class="form__label">Correo</label>
-                                <input type="email" name="mail" id="" placeholder="Correo electronico" required class="form__input" id="mail"/>
+                                <input type="email" name="mail" id="mail" placeholder="Correo electronico" required class="form__input" id="mail"/>
                             </div>
                             <div class="form__request f-elements f-col gap-sm">
-                                <label for="services" class="form__label">Esoja uno de nuestros servicios</label>
-                                <select id="services" name="" class="form__input">
+                                <label for="serv" class="form__label">Esoja uno de nuestros servicios</label>
+                                <select id="serv" name="listaservicios" class="form__input">
                                     <option disabled selected>Selecciona el servicio</option>
                                     <option>Diseño Web</option>
                                     <option>Aplicaciones Web</option>
@@ -235,13 +235,15 @@
                             </div>
                             <div class="form__request f-elements f-col gap-sm">
                                 <label for="description" class="form__label">Mensaje</label>
-                                <textarea name="" placeholder="Comentarios" required class="form__textarea" id="description"/></textarea>
+                                <textarea name="" placeholder="Comentarios" required class="form__textarea" id="description"></textarea>
                             </div>
+                            <div id="response"></div>
                             <div class="form__button">
                                 <button class="button button--primary" id="submit">Enviar a Whatsapp</button>
                             </div>
                         </div>
                     </form>
+                    <script src="js/form.js"></script>
                 </div>
             </div>
         </section>
@@ -254,5 +256,4 @@
         </div>
     </footer>
 </body>
-<script src="js/form.js"></script>
 </html>
