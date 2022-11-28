@@ -75,3 +75,7 @@
   .card__text::after {
     content: '❤';
   }
+
+  .icon{
+    animation: t-rotate 1.5s linear infinite;
+  }

@@ -9,6 +9,7 @@
 @import '../css/modules/form.css';
 @import '../css/modules/footer.css';
 @import '../css/modules/list.css';
+@import '../css/modules/animations.css';
 
 .body{
     font-family: var(--primary-font-family);
