@@ -7,6 +7,7 @@
 @import '../css/modules/nav.css';
 @import '../css/modules/banner.css';
 @import '../css/modules/form.css';
+@import '../css/modules/footer.css';
 
 .body{
     font-family: var(--primary-font-family);
