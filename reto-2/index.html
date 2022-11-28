@@ -211,29 +211,34 @@
                     <div class="form__img">
                         <img src="assets/img/3d estrategia (1) 1 (1).webp" alt="" class="form__img"/>
                     </div>
-                    <form action="" method="post" class="form f-elements f-col gap-sm">
+                    <form action="" class="form f-elements f-col gap-sm">
                         <div class="form__legend">
                             <legend class="form__legend-title">Contactános llenando todos los campos</legend>
                         </div>
                         <div class="form__container f-elements f-col gap-sm">
                             <div class="form__request f-elements f-col gap-sm">
-                                <label for="" class="form__label">Nombre</label>
-                                <input type="text" placeholder="Nombre completo" class="form__input"/>
+                                <label for="name" class="form__label">Nombre</label>
+                                <input type="text" placeholder="Nombre completo" class="form__input" id="name"/>
                             </div>
                             <div class="form__request f-elements f-col gap-sm">
-                                <label for="" class="form__label">Telefono</label>
-                                <input type="tel" placeholder="Telefono" required class="form__input"/>
+                                <label for="mail" class="form__label">Correo</label>
+                                <input type="email" name="mail" id="" placeholder="Correo electronico" required class="form__input" id="mail"/>
                             </div>
                             <div class="form__request f-elements f-col gap-sm">
-                                <label for="" class="form__label">Correo</label>
-                                <input type="email" name="mail" id="" placeholder="Correo electronico" required class="form__input"/>
+                                <label for="services" class="form__label">Esoja uno de nuestros servicios</label>
+                                <select id="services" name="" class="form__input">
+                                    <option disabled selected>Selecciona el servicio</option>
+                                    <option>Diseño Web</option>
+                                    <option>Aplicaciones Web</option>
+                                    <option>E-Commerce</option>
+                                </select>
                             </div>
                             <div class="form__request f-elements f-col gap-sm">
-                                <label for="" class="form__label">Mensaje</label>
-                                <textarea name="" placeholder="Comentarios" required class="form__textarea"/></textarea>
+                                <label for="description" class="form__label">Mensaje</label>
+                                <textarea name="" placeholder="Comentarios" required class="form__textarea" id="description"/></textarea>
                             </div>
                             <div class="form__button">
-                                <button class="button button--primary">Enviar</button>
+                                <button class="button button--primary" id="submit">Enviar a Whatsapp</button>
                             </div>
                         </div>
                     </form>
