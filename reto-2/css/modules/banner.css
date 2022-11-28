@@ -2,6 +2,7 @@
     background-image: url("../../assets/img/hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    box-sizing: border-box;
 }
 
 .banner__container{
@@ -20,7 +21,7 @@
 }
 
 .banner__title{
-    font-size: 2rem;
+    font-size: var(--primary-text-font-size);
 }
 
 .banner__description{
