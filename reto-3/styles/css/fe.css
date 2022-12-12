@@ -266,6 +266,7 @@
   width: 8rem;
   padding: 2rem 0rem;
   background-color: var(--secondary-highlight-color);
+  color: var(--reverse-primary-text-color);
   border-radius: 50%;
   margin: 2rem auto;
 }
