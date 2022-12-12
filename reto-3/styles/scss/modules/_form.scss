@@ -11,6 +11,10 @@
 
     &__img{
         max-width: 360px;
+
+        @include desktop{
+            max-width: 450px;
+        }
     }
     
     &__legend{
@@ -45,21 +49,19 @@
     
 }
 
-@media (min-width: 768px){
-    .form__img{
-        max-width: 450px;
-    }
-    .bg-color{
+.bg-color{
+    @include desktop{
         background-color: var(--secondary-button-color);
         box-shadow: 0 0 0.125rem var(--primary-shadow-color),
-    0 0 0.25rem var(--primary-shadow-color);
-    border-radius: var(--primary-border-radius);
-    overflow: hidden;
-    transition: box-shadow 0.25s;
-    padding: 2rem 0 3rem 0rem;
-    box-sizing: border-box;
+        0 0 0.25rem var(--primary-shadow-color);
+        border-radius: var(--primary-border-radius);
+        overflow: hidden;
+        transition: box-shadow 0.25s;
+        padding: 2rem 0 3rem 0rem;
+        box-sizing: border-box;
     }
-    .bg-color:hover {
+
+    &:hover {
         box-shadow: 0 0 0.25rem 0 var(--primary-highlight-color);
       }
 }
