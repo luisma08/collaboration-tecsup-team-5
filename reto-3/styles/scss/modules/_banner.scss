@@ -1,0 +1,32 @@
+.banner{
+    background-image: url("../../assets/img/hero.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    margin-top: 2rem;
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        height: 20rem;
+        background-color: rgba(0, 0, 0, .7);
+    }
+    
+    &__title, &__description{
+        margin: 0;
+        color: white;
+    }
+    
+    &__title{
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    &__description{
+        font-size: 1.2rem;
+    }
+}
+
