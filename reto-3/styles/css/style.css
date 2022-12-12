@@ -1,15 +1,4 @@
-@import '../css/modules/layout.css';
-@import '../css/modules/utils.css';
-@import '../css/modules/card.css';
-@import '../css/modules/variables.css';
-@import '../css/modules/buttons.css';
-@import '../css/modules/header.css';
-@import '../css/modules/nav.css';
-@import '../css/modules/banner.css';
-@import '../css/modules/form.css';
-@import '../css/modules/footer.css';
-@import '../css/modules/list.css';
-@import '../css/modules/animations.css';
+@import '../../styles/css/modules/variables.css';
 
 .body{
     font-family: var(--primary-font-family);
