@@ -1,11 +1,13 @@
 .footer{
     background-color: var(--primary-theme-color);
     box-sizing: border-box;
+    padding: 1.5rem 0;
 
     &__description{
         color: var(--primary-text-color);
         font-size: var(--primary-text-font-size);
         text-align: center;
+        margin: 0;
     }
 
     &__nav-list{
@@ -14,7 +16,7 @@
       list-style: none;
     }
 
-    &__nav-link{
+    &__nav-img{
       width: 2rem;
       height: 2rem;
       transition: transform 0.25s;
@@ -23,10 +25,5 @@
         transform: scale(1.25);
       }
 
-    }
-    
-    &__nav-img{
-      width: 100%;
-      height: 100%;
     }
 }
