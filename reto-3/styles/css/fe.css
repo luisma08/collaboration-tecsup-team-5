@@ -53,11 +53,6 @@
   text-align: center;
   margin: 0;
 }
-@media (min-width: 768px) {
-  .section {
-    color: var(--primary-text-color);
-  }
-}
 
 .container {
   max-width: var(--max-width-container);
@@ -450,6 +445,12 @@
 }
 .bg-color:hover {
   box-shadow: 0 0 0.25rem 0 var(--primary-highlight-color);
+}
+
+@media (min-width: 768px) {
+  .contact__title {
+    color: var(--primary-text-color);
+  }
 }
 
 /*# sourceMappingURL=fe.css.map */

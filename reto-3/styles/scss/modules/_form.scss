@@ -66,3 +66,9 @@
         box-shadow: 0 0 0.25rem 0 var(--primary-highlight-color);
       }
 }
+
+.contact__title{
+    @include desktop{
+        color: var(--primary-text-color);
+    }
+}
