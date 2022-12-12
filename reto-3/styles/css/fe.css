@@ -53,6 +53,11 @@
   text-align: center;
   margin: 0;
 }
+@media (min-width: 768px) {
+  .section {
+    color: var(--primary-text-color);
+  }
+}
 
 .container {
   max-width: var(--max-width-container);
@@ -392,6 +397,7 @@
   padding: 1.125rem;
   box-shadow: 0 0 0.125rem var(--primary-shadow-color), 0 0 0.25rem var(--primary-shadow-color);
   border-radius: var(--primary-border-radius);
+  border: 0.125rem solid var(--reverse-primary-border-color);
   max-width: 360px;
   overflow: hidden;
   box-sizing: border-box;
@@ -406,7 +412,7 @@
   }
 }
 .form__legend {
-  color: var(--secondary-highlight-color);
+  color: var(--primary-text-color);
   font-size: var(--primary-text-font-size);
   margin: 0;
 }
@@ -432,7 +438,7 @@
 
 @media (min-width: 768px) {
   .bg-color {
-    background-color: var(--secondary-button-color);
+    background-color: var(--primary-theme-color);
     box-shadow: 0 0 0.125rem var(--primary-shadow-color), 0 0 0.25rem var(--primary-shadow-color);
     border-radius: var(--primary-border-radius);
     overflow: hidden;

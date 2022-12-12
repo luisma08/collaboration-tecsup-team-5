@@ -10,6 +10,10 @@
         margin: 0;
       }
 
+      @include desktop{
+        color: var(--primary-text-color);
+      }
+
   }
    
   .container {
