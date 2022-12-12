@@ -29,11 +29,13 @@
     position: relative;
 }
 
-@media (min-width: 768px){
-    .md\:f-row{
+.md\:f-row{
+    @include desktop{
         flex-direction: row;
     }
-    .md\:d-block{
+}
+.md\:d-block{
+    @include desktop{
         display: block;
     }
 }

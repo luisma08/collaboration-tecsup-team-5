@@ -12,6 +12,13 @@
         background-color: var(--secondary-theme-color);
         transform: translateX(var(--translate-list-header));
         transition: transform 0.25s;
+
+        @include desktop{
+            position: static;
+            width: auto;
+            height: auto;
+            background-color: transparent;
+        }
     }
     
     &__link {
@@ -41,17 +48,9 @@
             width: 100%;
         }
 
-    }
-}
+        @include desktop{
+            font-size: var(--nav-primary-font-size);
+        }
 
-@media (min-width: 768px){
-    .list--header{
-        position: static;
-        width: auto;
-        height: auto;
-        background-color: transparent;
-    }
-    .list__link {
-        font-size: var(--nav-primary-font-size);
     }
 }

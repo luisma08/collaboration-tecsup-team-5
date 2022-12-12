@@ -34,6 +34,10 @@
     
     &--responsive{
         flex-direction: column;
+
+        @include desktop{
+          flex-direction: row;
+        }
     }
 
   }
@@ -45,6 +49,10 @@
 
     &--responsive{
         grid-template-columns: 100%;
+
+        @include desktop{
+          grid-template-columns: 1fr 1fr;
+        }
     }
 
     &--center{
@@ -55,16 +63,8 @@
 
   }
   
-  @media (min-width:768px){
-    .f-elements--responsive{
-        flex-direction: row;
-    }
-  
-    .g-elements--responsive{
-      grid-template-columns: 1fr 1fr;
-    }
-  
-    .g-template-columns{
+  .g-template-columns{
+    @include desktop{
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
