@@ -7,7 +7,7 @@ export const renderCharacters = (data) => {
   
       charactersContainer.innerHTML += `
         <div class="col-md-4" key=${id}>
-          <div class="card bg-dark border border-2 border-light border-opacity-25 h-100 mx-auto"
+          <div class="card bg-dark border border-2 border-light border-opacity-25 h-100 mx-auto overflow-hidden""
             style="width: min(100%, 18rem);">
             <div class="card-header text-center">
               ${title}
@@ -23,9 +23,7 @@ export const renderCharacters = (data) => {
               </p>
               <p class="card-text">${description}</p>
             </div>
-            <div class="card-footer text-center">
-              <a href="${thumbnail}" target="_blank" rel="noopener noreferrer" class="card-link">Agregar al carritos</a>
-            </div>
+            <button type="button" class="btn btn-primary rounded-0">Agregar al carrito</button>
           </div>
         </div>
       `;
