@@ -1,0 +1,14 @@
+{
+    "profile": {
+        "id":1,
+        "shortName": "Jorge Mayta",
+        "slogan": "Elmejor desarrollador web frontend del Peru",
+        "username": "luima",
+        "title": "Desarrollador Web Full Stack",
+        "mainStack": "HTML, CSS, JS, JAVA, SQL, MYSQL, ARDUINO, PHP, C++",
+        "description": "Desarrollador web con bachiller en Ingeniería de Sistemas e Informática. Dinámico, analítico, tolerante a la presión, capacidad para trabajar en equipo y orientado al logro.",
+        "urlPhoto":"https://luisma08.github.io/tecsup-frontend-e-g11/reto-1/img/FOTO_MAYTA%20AVALOS%20JORGE%20LUIS_11zon.webp",
+        "urlGitHub":"https://github.com/luisma08",
+        "urlCv":"https://github.com/luisma08"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "foods": [
+        {
+          "id": 1,
+          "name": "Ají de Gallina",
+          "description": "El ají de gallina es un plato típico de la gastronomía peruana, concretamente de la costa, ​ que consiste en un ají o crema espesa con pechuga de gallina deshilachada. Esta crema es servida con papas cocidas, y en ocasiones con arroz blanco. Es común reemplazar la gallina por pollo.",
+          "urlImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Ají_de_gallina.jpg/800px-Ají_de_gallina.jpg",
+          "urlRecipe": "https://www.recetasnestle.com.pe/recetas/aji-de-gallina-2"
+        },
+        {
+          "id": 2,
+          "name": "Lomo Saltado",
+          "description": "El ají de gallina es un plato típico de la gastronomía peruana, concretamente de la costa, ​ que consiste en un ají o crema espesa con pechuga de gallina deshilachada. Esta crema es servida con papas cocidas, y en ocasiones con arroz blanco. Es común reemplazar la gallina por pollo.",
+          "urlImage": "https://decomidaperuana.com/wp-content/uploads/2020/10/lomo-saltado.jpg",
+          "urlRecipe": "https://www.recetasnestle.com.pe/recetas/aji-de-gallina-2"
+        },
+        {
+          "id": 3,
+          "name": "Chaufa",
+          "description": "El ají de gallina es un plato típico de la gastronomía peruana, concretamente de la costa, ​ que consiste en un ají o crema espesa con pechuga de gallina deshilachada. Esta crema es servida con papas cocidas, y en ocasiones con arroz blanco. Es común reemplazar la gallina por pollo.",
+          "urlImage": "https://www.peru.travel/Contenido/General/Imagen/pe/538/1.1/arroz-chaufa.jpg",
+          "urlRecipe": "https://www.recetasnestle.com.pe/recetas/aji-de-gallina-2"
+        }
+    ]
+}
