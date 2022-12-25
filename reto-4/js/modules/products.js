@@ -1,28 +1,28 @@
-import { fetchReadCharacters, renderCharacters } from "../utils/utils.js";
+import { fetchReadProducts, renderProducts } from "../utils/utils.js";
 
-const characters = async () => {
-  const previousCharacters = document.getElementById('previousCharacters');
-  const nextCharacters = document.getElementById('nextCharacters');
+const products = async () => {
+  const previousProducts = document.getElementById('previousProducts');
+  const nextProducts = document.getElementById('nextProducts');
   let limit = 10;
   let skip = 0;
 
-  previousCharacters.addEventListener('click', async () => {
+  previousProducts.addEventListener('click', async () => {
     limit-=10;
     skip-=10;
-    const data = await fetchReadCharacters(limit, skip);
-    renderCharacters(data);
+    const data = await fetchReadProducts(limit, skip);
+    renderProducts(data);
   });
 
-  nextCharacters.addEventListener('click', async () => {
+  nextProducts.addEventListener('click', async () => {
     limit+=10;
     skip+=10;
-    const data = await fetchReadCharacters(limit, skip);
-    renderCharacters(data);
+    const data = await fetchReadProducts(limit, skip);
+    renderProducts(data);
   });
 
-  const data = await fetchReadCharacters(limit, skip);
-  renderCharacters(data);
+  const data = await fetchReadProducts(limit, skip);
+  renderProducts(data);
   //pagination(data);
 };
 
-export default characters;
+export default products;

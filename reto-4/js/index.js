@@ -3,11 +3,11 @@
 'use strict';
 
 import header from "./modules/header.js";
-import characters from "./modules/characters.js";
+import products from "./modules/products.js";
 
 const documentReady = () => {
   header();
-  characters();
+  products();
 };
 
 document.addEventListener('DOMContentLoaded', documentReady);

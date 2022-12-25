@@ -1,4 +1,4 @@
-export const renderCharacters = (data) => {
+export const renderProducts = (data) => {
     const charactersContainer = document.getElementById('charactersContainer');
     charactersContainer.innerHTML = '';
   
@@ -37,26 +37,27 @@ export const renderCharacters = (data) => {
     console.log(pages);
   };*/
   
-  export const fetchReadCharacters = async (limit = 10, skip = 1) => {
-    const previousCharacters = document.getElementById('previousCharacters');
-    const nextCharacters = document.getElementById('nextCharacters');
+  export const fetchReadProducts = async (limit = 10, skip = 1, search = '') => {
+    const previousProducts = document.getElementById('previousProducts');
+    const nextProducts = document.getElementById('nextProducts');
 
     try {
 
-        const { data } = await axios.get(`https://dummyjson.com/products?limit=${limit}&skip=${skip}`);
-        //const pages = data.info['pages'];
+        const { data } = await axios.get(`https://dummyjson.com/products/search?q=&limit=${limit}&skip=${skip}`);
+        const limits = data['limit'];
+        console.log('viendo limite ' +limits);
 
         if(skip == 0){
-            previousCharacters.setAttribute('disabled', true);
-            previousCharacters.classList.add('text-light', 'bg-dark');
-        } else if (limit == 30){
-            nextCharacters.setAttribute('disabled', true);
-            nextCharacters.classList.add('text-light', 'bg-dark');
+            previousProducts.setAttribute('disabled', true);
+            previousProducts.classList.add('text-light', 'bg-dark');
+        } else if (limit >= limits){
+            nextProducts.setAttribute('disabled', true);
+            nextProducts.classList.add('text-light', 'bg-dark');
         } else {
             previousCharacters.removeAttribute('disabled');
-            nextCharacters.removeAttribute('disabled');
-            previousCharacters.classList.remove('text-light', 'bg-dark');
-            nextCharacters.classList.remove('text-light', 'bg-dark');
+            nextProducts.removeAttribute('disabled');
+            previousProducts.classList.remove('text-light', 'bg-dark');
+            nextProducts.classList.remove('text-light', 'bg-dark');
         }
         console.log("Limite: " +limit);
         console.log("Inicio: " +skip);

@@ -1,29 +1,29 @@
-import { fetchReadCharacters, renderCharacters } from "../utils/utils.js";
+import { fetchReadProducts, renderProducts } from "../utils/utils.js";
 
 const header = () => {
   const searchForm = document.getElementById('searchForm');
-  const previousCharacters = document.getElementById('previousCharacters');
-  const nextCharacters = document.getElementById('nextCharacters');
+  const previousProducts = document.getElementById('previousProducts');
+  const nextProducts = document.getElementById('nextProducts');
   let page=1;
 
-  const searchCharacters = async (e) => {
+  const searchProducts = async (e) => {
     e.preventDefault();
     const name = searchForm.name.value;
-    const data = await fetchReadCharacters(page, name);
-    renderCharacters(data);
+    const data = await fetchReadProducts(page, name);
+    renderProducts(data);
     //pagination(data);
     
-    previousCharacters.addEventListener('click', async () => {
-        const data = await fetchReadCharacters(--page, name);
-        renderCharacters(data);
+    previousProducts.addEventListener('click', async () => {
+        const data = await fetchReadProducts(--page, name);
+        renderProducts(data);
       });
     
-      nextCharacters.addEventListener('click', async () => {
-        const data = await fetchReadCharacters(++page, name);
-        renderCharacters(data);
+      nextProducts.addEventListener('click', async () => {
+        const data = await fetchReadProducts(++page, name);
+        renderProducts(data);
       });
   };
-  searchForm.addEventListener('submit', searchCharacters);
+  searchForm.addEventListener('submit', searchProducts);
 };
 
 export default header;
