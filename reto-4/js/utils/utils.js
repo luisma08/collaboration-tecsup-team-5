@@ -225,7 +225,7 @@ export const renderProducts = (data) => {
     } catch (error) {
       console.log(error);
     } finally {
-      window.scrollTo(0, 900);
+      console.log('conexion establecida');
     }
   };
 
