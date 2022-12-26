@@ -25,7 +25,7 @@
                   <a class="nav-link active" aria-current="page" href="./index.html">E-Commerce</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Categorias
                   </a>
                   <ul class="dropdown-menu">
@@ -36,8 +36,9 @@
                   </ul>
                 </li>
               </ul>
-              <button type="button" class="btn p-0 m-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <button type="button" class="position-relative btn p-2 m-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <img src="./assets/icons/cart-white.svg" alt="" width="40" height="40">
+                <span class="position-absolute bg-light text-dark px-2 py-1 rounded-circle" id="mxCart" style="right:0; top: 0;"></span>
               </button>
               <form class="d-flex" role="search" id="searchForm">
                 <input class="form-control me-2" type="search" placeholder="Buscar Productos" aria-label="Search" id="name" name="name" required>
@@ -65,7 +66,7 @@
               <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50">
                 <h5 class="fs-1">TECNOLOGIAS</h5>
                 <p>Encuentra lo mejor de lo mejor en tecnologia.</p>
-                <button class="btn btn-primary px-5">COMPRAR</button>
+                <button class="btn btn-success px-5">COMPRAR</button>
               </div>
             </div>
             <div class="carousel-item" data-bs-interval="5000">
@@ -74,7 +75,7 @@
               <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50">
                 <h5 class="fs-1">Moda y ROPA</h5>
                 <p>Encuentra lo mejor de lo mejor en Moda y ROPA.</p>
-                <button class="btn btn-primary px-5">COMPRAR</button>
+                <button class="btn btn-success px-5">COMPRAR</button>
               </div>
             </div>
             <div class="carousel-item" data-bs-interval="5000">
@@ -83,7 +84,7 @@
               <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50">
                 <h5 class="fs-1">GADGETS</h5>
                 <p>Encuentra lo mejor de lo mejor en Gadgets.</p>
-                <button class="btn btn-primary px-5">COMPRAR</button>
+                <button class="btn btn-success px-5">COMPRAR</button>
               </div>
             </div>
           </div>

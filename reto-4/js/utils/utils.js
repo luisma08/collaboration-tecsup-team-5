@@ -63,7 +63,7 @@ export const renderProducts = (data) => {
     } catch (error) {
       console.log(error);
     } finally {
-      window.scrollTo(0, 0);
+      console.log('conexion establecida');
     }
   };
 
@@ -116,8 +116,12 @@ export const renderProducts = (data) => {
         </td>
       </tr>
     `;
+
     suma += price;
+    index += 1;
     const totalPrice = document.getElementById('totalPrice');
+    const mxCart = document.getElementById('mxCart');
+    mxCart.textContent = index;
     totalPrice.innerText = `$ ${suma}`;
     });
     let delBtn = document.querySelectorAll('.delete-btn');
@@ -221,7 +225,7 @@ export const renderProducts = (data) => {
     } catch (error) {
       console.log(error);
     } finally {
-      window.scrollTo(0, 0);
+      window.scrollTo(0, 900);
     }
   };
 
@@ -246,7 +250,7 @@ export const renderProducts = (data) => {
     } catch (error) {
       console.log(error);
     } finally {
-      window.scrollTo(0, 0);
+      window.scrollTo(0, 900);
     }
   };
 
