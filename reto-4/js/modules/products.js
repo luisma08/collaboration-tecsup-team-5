@@ -7,16 +7,16 @@ const products = async () => {
   let skip = 0;
 
   previousProducts.addEventListener('click', async () => {
-    limit-=10;
+    //limit-=10;
     skip-=10;
-    const data = await fetchReadProducts(limit, skip);
+    const data = await fetchReadProducts(--limit, skip);
     renderProducts(data);
   });
 
   nextProducts.addEventListener('click', async () => {
-    limit+=10;
+    //limit+=10;
     skip+=10;
-    const data = await fetchReadProducts(limit, skip);
+    const data = await fetchReadProducts(++limit, skip);
     renderProducts(data);
   });
 

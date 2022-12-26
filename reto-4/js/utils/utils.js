@@ -185,6 +185,8 @@ export const renderProducts = (data) => {
     const nextProducts = document.getElementById('nextProducts');
     //const getLimit = limit;
     //console.log(getLimit);
+    console.log("LimiteSS: " +limit);
+    console.log("InicioSS: " +skip);
 
     try {
 
@@ -211,8 +213,8 @@ export const renderProducts = (data) => {
             previousProducts.classList.remove('text-light', 'bg-dark');
             nextProducts.classList.remove('text-light', 'bg-dark');
         }
-        //console.log("Limite: " +limit);
-        //console.log("Inicio: " +skip);
+        console.log("Limite: " +limit);
+        console.log("Inicio: " +skip);
 
         return data.products;
 
