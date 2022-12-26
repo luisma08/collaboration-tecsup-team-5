@@ -1,7 +1,5 @@
 'use strict';
 
-'use strict';
-
 import { header, categories } from "./modules/header.js";
 import products from "./modules/products.js";
 

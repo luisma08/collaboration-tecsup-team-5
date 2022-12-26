@@ -24,11 +24,62 @@ export const renderProducts = (data) => {
               </p>
               <p class="card-text">${description}</p>
             </div>
-            <button type="button" class="btn btn-primary rounded-0">Agregar al carrito</button>
+            <button type="button" class="btn btn-primary rounded-0" onclick="addCard(${id}) id="toCard">Agregar al carrito</button>
           </div>
         </div>
       `;
     });
+  };
+
+  const addCard = async (id) => {
+    const data = await fetchSingleProducts(index);
+    readCardProduct(data);
+  };
+  //search single product
+  const fetchSingleProducts = async (id) => {
+
+    try {
+
+        const { data } = await axios.get(`https://dummyjson.com/products/${id}`);
+        return data;
+
+    } catch (error) {
+      console.log(error);
+    } finally {
+      window.scrollTo(0, 0);
+    }
+  };
+  //add single product
+  const readCardProduct = (data) => {
+    const tBodyCard = document.getElementById('tBodyCard');
+    tBodyCard.innerHTML = '';
+    data.forEach((element) => {
+    const { id, title, description, category, price, Imagen} = element;/** Desectructurar elementos {} par acceder a ellos */
+    tBodyCard.innerHTML += `
+      <tr>
+        <td>${id}</td>
+        <td>${title}</td>
+        <td>${description}</td>
+        <td>${category}</td>
+        <td>${price}</td>
+        <td>
+          <img
+            src="${Imagen}"
+            alt="${title}" class="img-fluid" style="max-width: 128px;" />
+        </td>
+        <td>
+            <button 
+            class="btn btn-info m-1" onclick="readPokemon(${id})">
+            ✏
+          </button>
+          <button 
+            class="btn btn-danger m-1" onclick="deletePokemon(${id})">
+            🗑
+          </button>
+        </td>
+      </tr>
+    `;
+  });
   };
 
   /*export const pagination = ({ info }) => {
@@ -105,3 +156,5 @@ export const renderProducts = (data) => {
       window.scrollTo(0, 0);
     }
   };
+
+  
