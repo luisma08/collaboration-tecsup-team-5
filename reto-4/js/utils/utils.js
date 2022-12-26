@@ -19,12 +19,12 @@ export const renderProducts = (data) => {
               <h5 class="card-title mt-2">${title}</h5>
               <h6 class="card-subtitle mb-2 text-muted">${category}</h6>
               <p class="card-text">
-                <span class="badge text-bg-primary">${category}</span>
+                <span class="badge text-bg-success">${category}</span>
                 <span class="badge text-bg-secondary">Precio $. ${price}</span>
               </p>
               <p class="card-text">${description}</p>
             </div>
-            <button type="button" class="btn btn-primary rounded-0 add-btn" id="${id}">Agregar al carrito</button>
+            <button type="button" class="btn btn-success rounded-0 add-btn" id="${id}">Agregar al carrito</button>
           </div>
         </div>
       `;
