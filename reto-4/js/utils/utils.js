@@ -1,6 +1,7 @@
 export const renderProducts = (data) => {
     const charactersContainer = document.getElementById('charactersContainer');
     charactersContainer.innerHTML = '';
+    console.log(data);
   
     data.forEach((element) => {
       const { id, title, description, price, category, thumbnail} = element;
@@ -37,30 +38,40 @@ export const renderProducts = (data) => {
     console.log(pages);
   };*/
   
-  export const fetchReadProducts = async (limit = 10, skip = 1, search = '') => {
+  export const fetchReadProducts = async (limit = 10, skip = 0, name = '') => {
     const previousProducts = document.getElementById('previousProducts');
     const nextProducts = document.getElementById('nextProducts');
+    //const getLimit = limit;
+    //console.log(getLimit);
 
     try {
 
-        const { data } = await axios.get(`https://dummyjson.com/products/search?q=&limit=${limit}&skip=${skip}`);
-        const limits = data['limit'];
-        console.log('viendo limite ' +limits);
-
+        const { data } = await axios.get(`https://dummyjson.com/products/search?q=${name}&limit=${limit}&skip=${skip}`);
+        let allLimit = limit;
+        let allProducts = data['total'];
+        console.log(data);
+        console.log('viendo limite ' +allLimit);
+        console.log('viendo total ' +allProducts);
+        
         if(skip == 0){
             previousProducts.setAttribute('disabled', true);
             previousProducts.classList.add('text-light', 'bg-dark');
-        } else if (limit >= limits){
+            if (allLimit >= allProducts){
+              nextProducts.setAttribute('disabled', true);
+              nextProducts.classList.add('text-light', 'bg-dark');
+            }
+        } else if (allLimit >= allProducts){
             nextProducts.setAttribute('disabled', true);
             nextProducts.classList.add('text-light', 'bg-dark');
         } else {
-            previousCharacters.removeAttribute('disabled');
+            previousProducts.removeAttribute('disabled');
             nextProducts.removeAttribute('disabled');
             previousProducts.classList.remove('text-light', 'bg-dark');
             nextProducts.classList.remove('text-light', 'bg-dark');
         }
-        console.log("Limite: " +limit);
-        console.log("Inicio: " +skip);
+        //console.log("Limite: " +limit);
+        //console.log("Inicio: " +skip);
+
         return data.products;
 
     } catch (error) {
