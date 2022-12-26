@@ -2,12 +2,14 @@
 
 'use strict';
 
-import header from "./modules/header.js";
+import { header, categories } from "./modules/header.js";
 import products from "./modules/products.js";
 
 const documentReady = () => {
+  categories();
   header();
   products();
+  categories();
 };
 
 document.addEventListener('DOMContentLoaded', documentReady);

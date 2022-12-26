@@ -1,6 +1,6 @@
-import { fetchReadProducts, renderProducts } from "../utils/utils.js";
+import { fetchReadProducts, renderProducts, fetchReadCategory } from "../utils/utils.js";
 
-const header = () => {
+export const header = () => {
   const searchForm = document.getElementById('searchForm');
   const previousProducts = document.getElementById('previousProducts');
   const nextProducts = document.getElementById('nextProducts');
@@ -31,4 +31,33 @@ const header = () => {
   searchForm.addEventListener('submit', searchProducts);
 };
 
-export default header;
+export const categories = () => {
+  const categories1 = document.querySelector('.category1');
+  const categories2 = document.querySelector('.category2');
+  const categories3 = document.querySelector('.category3');
+  const categories4 = document.querySelector('.category4');
+
+  categories1.addEventListener('click', async () => {
+    const category = document.querySelector('.category1').textContent;
+    const data = await fetchReadCategory(category);
+    renderProducts(data);
+  });
+
+  categories2.addEventListener('click', async () => {
+    const category = document.querySelector('.category2').textContent;
+    const data = await fetchReadCategory(category);
+    renderProducts(data);
+  });
+
+  categories3.addEventListener('click', async () => {
+    const category = document.querySelector('.category3').textContent;
+    const data = await fetchReadCategory(category);
+    renderProducts(data);
+  });
+
+  categories4.addEventListener('click', async () => {
+    const category = document.querySelector('.category4').textContent;
+    const data = await fetchReadCategory(category);
+    renderProducts(data);
+  });
+};

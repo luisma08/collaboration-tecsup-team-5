@@ -21,18 +21,20 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#foods">Personajes</a>
+                  <a class="nav-link active" aria-current="page" href="./index.html">E-Commerce</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Link</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
+                    Categorias
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><button class="dropdown-item category1" href="#smartphones">smartphones</button></li>
+                    <li><button class="dropdown-item category2" href="#laptops">laptops</button></li>
+                    <li><button class="dropdown-item category3" href="#fragrances">fragrances</button></li>
+                    <li><button class="dropdown-item category4" href="#skincare">skincare</button></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                   </ul>
@@ -42,7 +44,7 @@
                 </li>
               </ul>
               <form class="d-flex" role="search" id="searchForm">
-                <input class="form-control me-2" type="search" placeholder="Buscar Personaje" aria-label="Search" id="name" name="name" required>
+                <input class="form-control me-2" type="search" placeholder="Buscar Productos" aria-label="Search" id="name" name="name" required>
                 <button class="btn btn-outline-success" type="submit">Buscar</button>
               </form>
             </div>
@@ -52,7 +54,7 @@
     <main>
         <section class="py-5" id="foods">
             <div class="container d-flex flex-column gap-4">
-              <h2 class="text-center pt-5">Personajes</h2>
+              <h2 class="text-center pt-5">Productos</h2>
               <div class="row d-flex justify-content-center g-4" id="charactersContainer">
               </div>
               <nav aria-label="Paginación">

@@ -80,3 +80,28 @@ export const renderProducts = (data) => {
       window.scrollTo(0, 0);
     }
   };
+
+  export const fetchReadCategory = async (category = '') => {
+    const previousProducts = document.getElementById('previousProducts');
+    const nextProducts = document.getElementById('nextProducts');
+    //const getLimit = limit;
+    //console.log(getLimit);
+
+    try {
+
+        const { data } = await axios.get(`https://dummyjson.com/products/category/${category}`);
+        console.log(data);
+
+        previousProducts.setAttribute('disabled', true);
+        previousProducts.classList.add('text-light', 'bg-dark');
+        nextProducts.setAttribute('disabled', true);
+        nextProducts.classList.add('text-light', 'bg-dark');
+        
+        return data.products;
+
+    } catch (error) {
+      console.log(error);
+    } finally {
+      window.scrollTo(0, 0);
+    }
+  };
