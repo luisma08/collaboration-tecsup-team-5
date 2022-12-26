@@ -1,14 +1,20 @@
 'use strict';
 
+
+//import { modal } from "./modules/card.js";
 import { header, categories } from "./modules/header.js";
 import products from "./modules/products.js";
+import { readCartProducts } from "./utils/utils.js";
 
 const documentReady = () => {
   categories();
   header();
   products();
-  categories();
+  readCartProducts();
+  //modal();
 };
+
+
 
 document.addEventListener('DOMContentLoaded', documentReady);
 

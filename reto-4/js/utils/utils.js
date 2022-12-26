@@ -7,7 +7,7 @@ export const renderProducts = (data) => {
       const { id, title, description, price, category, thumbnail} = element;
   
       charactersContainer.innerHTML += `
-        <div class="col-md-4" key=${id}>
+        <div class="col-md-4" key="${id}">
           <div class="card bg-dark border border-2 border-light border-opacity-25 h-100 mx-auto overflow-hidden""
             style="width: min(100%, 18rem);">
             <div class="card-header text-center">
@@ -24,23 +24,40 @@ export const renderProducts = (data) => {
               </p>
               <p class="card-text">${description}</p>
             </div>
-            <button type="button" class="btn btn-primary rounded-0" onclick="addCard(${id}) id="toCard">Agregar al carrito</button>
+            <button type="button" class="btn btn-primary rounded-0 add-btn" id="${id}">Agregar al carrito</button>
           </div>
         </div>
       `;
     });
+    let addBtn = document.querySelectorAll('.add-btn');
+    const addBtns = [...addBtn];
+    console.log(addBtns);
+    addBtns.forEach((btn) => {
+      btn.addEventListener('click', event => {
+        let index = parseInt(event.target.id);
+        addCart(index);
+      });
+        
+    });
   };
 
-  const addCard = async (id) => {
+  const PRODUCTS_DATASTORAGE = 'products-storage';
+  const products = JSON.parse(localStorage.getItem(PRODUCTS_DATASTORAGE)) ?? [];
+
+  const addCart = async (index) => {
     const data = await fetchSingleProducts(index);
-    readCardProduct(data);
+    addProductStorage(data);
   };
+
   //search single product
-  const fetchSingleProducts = async (id) => {
+  const fetchSingleProducts = async (index) => {
 
     try {
 
-        const { data } = await axios.get(`https://dummyjson.com/products/${id}`);
+        const { data } = await axios.get(`https://dummyjson.com/products/${index}`);
+        console.log('Producto obtenido');
+        console.log(data);
+        
         return data;
 
     } catch (error) {
@@ -49,38 +66,112 @@ export const renderProducts = (data) => {
       window.scrollTo(0, 0);
     }
   };
+
+  const addProductStorage = (data) => {
+    const id = data.id;
+    const title = data.title;
+    const brand = data.brand;
+    const category = data.category;
+    const price = data.price;
+    const thumbnail = data.thumbnail;
+    
+    products.push({ id, title, brand, category, price, thumbnail });
+    localStorage.setItem(PRODUCTS_DATASTORAGE, JSON.stringify(products));
+    readCartProduct();
+  };
+
+  export const readCartProducts = () => {
+    //addProductStorage();
+    readCartProduct();
+  };
   //add single product
-  const readCardProduct = (data) => {
+  const readCartProduct = () => {
     const tBodyCard = document.getElementById('tBodyCard');
+    let suma = 0;
     tBodyCard.innerHTML = '';
-    data.forEach((element) => {
-    const { id, title, description, category, price, Imagen} = element;/** Desectructurar elementos {} par acceder a ellos */
+    console.log('Producto renderizado');
+    //console.log(dataList);
+
+    products.forEach((elements, index) => {
+    const { id, title, brand, category, price, thumbnail } = elements;/** Desectructurar elementos {} par acceder a ellos */
+    //console.log(title);
     tBodyCard.innerHTML += `
       <tr>
-        <td>${id}</td>
+        <td>${index + 1}</td>
+        <td>EC-${id}</td>
         <td>${title}</td>
-        <td>${description}</td>
+        <td>${brand}</td>
         <td>${category}</td>
-        <td>${price}</td>
+        <td>$ ${price}</td>
         <td>
           <img
-            src="${Imagen}"
+            src="${thumbnail}"
             alt="${title}" class="img-fluid" style="max-width: 128px;" />
         </td>
         <td>
-            <button 
-            class="btn btn-info m-1" onclick="readPokemon(${id})">
-            ✏
-          </button>
           <button 
-            class="btn btn-danger m-1" onclick="deletePokemon(${id})">
+            class="btn btn-danger m-1 delete-btn" id="${index}">
             🗑
           </button>
         </td>
       </tr>
     `;
-  });
+    suma += price;
+    const totalPrice = document.getElementById('totalPrice');
+    totalPrice.innerText = `$ ${suma}`;
+    });
+    let delBtn = document.querySelectorAll('.delete-btn');
+    const delBtns = [...delBtn];
+    console.log(delBtns);
+    delBtns.forEach((btn) => {
+      btn.addEventListener('click', event => {
+        let index = parseInt(event.target.id);
+        console.log(index);
+        deletePokemon(index);
+      });
+        
+    });
   };
+
+  const deletePokemon = (index) => {
+    const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+          confirmButton: 'btn btn-success mx-1',
+          cancelButton: 'btn btn-danger mx-1'
+        },
+        buttonsStyling: false
+      })
+      
+      swalWithBootstrapButtons.fire({
+        title: 'Estas seguro?',
+        text: "¡No podrás revertir esto!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Si, eliminar!',
+        cancelButtonText: 'No, cancelar!',
+        reverseButtons: true
+      }).then((result) => {
+        if (result.isConfirmed) {
+            products.splice(index, 1);
+            localStorage.setItem(PRODUCTS_DATASTORAGE, JSON.stringify(products));
+            readCartProduct();
+          swalWithBootstrapButtons.fire(
+            'Eliminado!',
+            'Su archivo ha sido eliminado.',
+            'success'
+          )
+        } else if (
+          /* Read more about handling dismissals below */
+          result.dismiss === Swal.DismissReason.cancel
+        ) {
+          swalWithBootstrapButtons.fire(
+            'Cancelar',
+            'Tu archivo imaginario está a salvo :)',
+            'error'
+          )
+        }
+      })
+};
 
   /*export const pagination = ({ info }) => {
     const previousCharacters = document.getElementById('previousCharacters');
